@@ -3,6 +3,8 @@ module github.com/go-bineanshi/go-zero
 go 1.18
 
 require (
+	entgo.io/ent v0.12.5
+	github.com/sony/sonyflake v1.2.0
 	github.com/stretchr/testify v1.8.2
 	github.com/zeromicro/go-zero v1.5.1
 	google.golang.org/grpc v1.54.0
