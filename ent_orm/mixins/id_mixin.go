@@ -27,7 +27,12 @@ func (IDMixin) Fields() []ent.Field {
 			UpdateDefault(time.Now),
 	}
 }
-
+func (IDMixin) Hooks() []ent.Hook {
+	return []ent.Hook{
+		// Add your hooks here if needed.
+		IDHook(),
+	}
+}
 func IDHook() ent.Hook {
 	sf := sonyflake.NewSonyflake(sonyflake.Settings{})
 	type IDSetter interface {
